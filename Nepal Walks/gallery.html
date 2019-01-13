@@ -1,0 +1,179 @@
+<!DOCTYPE html> 
+
+<html lang ="en">
+
+  <head>
+    <meta charset="utf-8"/>
+
+    <title> Nepal Photo Gallery </title>
+
+    <link rel="stylesheet" href="CSS/styles.css"/>
+
+    <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+     <!--[if lte IE 7]>
+        <link rel="stylesheet" href="style_ie.css" />
+        <![endif]-->
+  </head>
+
+  <body> 
+  	<header id="headerBar">
+      <div class="headerImageContainer">
+
+        <a id="homeButton" class="headerButton" href="walkingNepal.html">Home</a>
+
+        <div class="dropdown">
+          <a id="walksDropdown" class="dropbtn" href="independentWalks.html">Walks</a>
+          <div id="dropdown-content" >
+            <a href="pharpingToChampadevi.html" class="dropdownLinks" id="link1">Pharping to Champadevi</a>
+            <a href="langtangValley.html" class="dropdownLinks" id="link2">Langtang Valley</a>
+            <a href="#" class="dropdownLinks" id="link3">Nagarkot</a>
+          </div>
+        </div>
+      
+        <a class="headerButton" href="kathmandu.html">Kathmandu</a>
+        <a class="headerButton" href="gallery.html">Gallery</a>
+        <a class="headerButton" href="aboutNepal.html">About Nepal</a>
+        <a class="headerButton" href="contact.html">Contact</a>   
+      </div>
+    </header>
+
+
+    <!-- <div class="headerImageContainer2">  -->
+      
+    </div>
+  	
+    <section>
+      <div class="row">
+        <div class="column">
+          <img src="Images/Gallery/mountains.jpg" onclick="openModal(); currentSlide(1)" class="hover-shadow" alt="A view of the mountains from Kathmandu">
+        </div>
+        <div class="column">
+          <img src="Images/Gallery/bakhtapurTemple.jpg" onclick="openModal(); currentSlide(2)" class="hover-shadow" alt="A beautiful temple in Bakhtapur">
+        </div>
+        <div class="column">
+          <img src="Images/Gallery/dryingGrain.jpg" onclick="openModal(); currentSlide(3)" class="hover-shadow" alt="Grain being dried in Bakhtapur">
+        </div>
+        <div class="column">
+          <img src="Images/Gallery/rooftopView.jpg" onclick="openModal(); currentSlide(4)" class="hover-shadow" alt="Some chapatis I made!">
+        </div>
+      </div>
+
+      <div id="modalGallery" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <div class="galleryContent">
+
+          <div class="slides">
+            <div class="numberText"> 1 / 4 
+            </div>
+            <img src="Images/Gallery/mountains.jpg" class="galleryPhoto" alt="">
+
+            <div class="numberText"> 2 / 4 
+            </div>
+            <img src="Images/Gallery/bakhtapurTemple.jpg" class="galleryPhoto" alt="">
+
+            <div class="numberText"> 3 / 4 
+            </div>
+            <img src="Images/Gallery/dryingGrain.jpg" class="galleryPhoto" alt="">
+
+            <div class="numberText"> 4 / 4 
+            </div>
+            <img src="Images/Gallery/chapati.jpg" class="galleryPhoto" alt="">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <div class="captionContainer">
+            <p id="caption"></p>            
+          </div>
+
+          <!-- <div class="column">
+            <img src="" class="demo" onclick="currentSlide(1)" alt="">
+          </div> 
+
+          <div class="column">
+            <img src="" class="demo" onclick="currentSlide(2)" alt="">
+          </div> 
+
+          <div class="column">
+            <img src="" class="demo" onclick="currentSlide(3)" alt="">
+          </div> 
+
+          <div class="column">
+            <img src="" class="demo" onclick="currentSlide(4)" alt="">
+          </div>  -->
+
+          
+        </div>
+        
+      </div>
+    </section>
+
+   
+
+  	<footer>
+  	
+  	</footer>
+  </body> 
+
+<script>
+  function openModal() {
+    document.getElementById('modalGallery').style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById('modalGallery').style.display = "none";
+  }
+
+  var slideIndex = 1; 
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n)
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+
+
+
+<script>
+        window.onscroll = function() {scrollHeader()};
+        function scrollHeader() {
+          if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+              document.getElementById("headerBar").className = "scrolledHeader";
+              
+            } else {
+              document.getElementById("headerBar").className = "";
+              
+          }
+      }
+    </script>
+
+</html> 

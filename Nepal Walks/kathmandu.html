@@ -1,0 +1,145 @@
+<!DOCTYPE html> 
+
+<html lang ="en">
+
+  <head>
+    <meta charset="utf-8"/>
+
+    <title> Walking Nepal </title>
+
+    <link rel="stylesheet" href="CSS/styles.css"/>
+
+    <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+     <!--[if lte IE 7]>
+        <link rel="stylesheet" href="style_ie.css" />
+        <![endif]-->
+  </head>
+
+  <body> 
+  	<header id="headerBar">
+      <div class="headerImageContainer">
+
+        <a id="homeButton" class="headerButton" href="walkingNepal.html">Home</a>
+
+        <div class="dropdown">
+          <a id="walksDropdown" class="dropbtn" href="independentWalks.html">Walks</a>
+          <div id="dropdown-content" >
+            <a href="pharpingToChampadevi.html" class="dropdownLinks" id="link1">Pharping to Champadevi</a>
+            <a href="langtangValley.html" class="dropdownLinks" id="link2">Langtang Valley</a>
+            <a href="#" class="dropdownLinks" id="link3">Nagarkot</a>
+          </div>
+        </div>
+      
+        <a class="headerButton" href="kathmandu.html">Kathmandu</a>
+        <a class="headerButton" href="gallery.html">Gallery</a>
+        <a class="headerButton" href="aboutNepal.html">About Nepal</a>
+        <a class="headerButton" href="contact.html">Contact</a>   
+      </div>
+    </header>
+
+    <!-- <div class="headerImageContainer2">  -->
+      
+    </div>
+  	
+    <nav>
+       <h3>Jump to</h3>
+       
+        <ul>
+        	<li> <a href="#KTM" class="anchor">Kathmandu </a> </li>
+        	<li> <a href="#Lalitpur">Lalitpur (Patan)  </a>  </li>
+        	<li> <a href="Bakhtapur">Bakhtapur </a>   </li>
+        </ul>
+  	</nav>
+
+    <section>
+      <h1 id="KTM">Kathmandu</h1>
+      <p>
+        Here are some of Kathmandu's highlights
+      </p>
+
+      <article>
+        <h3>Durbar Square and Basantapur</h3>
+        <p>Info</p>
+      </article>
+
+      <article>
+        <h3>Thamel</h3>
+        <p>Info</p>
+      </article>
+
+      <article>
+        <h3>Swayabhunath</h3>
+        <p>Info</p>
+      </article>
+
+      <article>
+        <h3>Durbar Marg Area</h3>
+        <p>Info</p>
+      </article>
+
+      
+    </section>
+    <section>
+      <h1 id="Lalitpur">Lalitpur</h1>
+
+      <article>
+        <h3>Durbar Square</h3>
+        <p>Info</p>
+      </article>
+
+      <article>
+        <h3>Old Town</h3>
+        <p>Info</p>
+      </article>
+
+      <article>
+        <h3>Jamsikhel and Sanepa</h3>
+        <p>Info</p>
+      </article>
+
+      <article>
+        <h3>Pulchowk</h3>
+        <p>Info</p>
+      </article>
+      
+    </section>
+
+    <section>
+      <h1 id="Bakhtapur">Bakhtapur</h1>
+
+      <article>
+        <h3>Durbar Square</h3>
+        <p>Info</p>
+      </article>
+
+      <article>
+        <h3>Old Town</h3>
+        <p>Info</p>
+      </article>
+
+    </section>
+
+  	<footer>
+  	
+  	</footer>
+  </body> 
+
+<script>
+        window.onscroll = function() {scrollHeader()};
+        function scrollHeader() {
+          if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+              document.getElementById("headerBar").className = "scrolledHeader";
+              document.getElementById("dropdown-content").className = "scrolledDropdown";
+              
+            } else {
+              document.getElementById("headerBar").className = "";
+              document.getElementById("dropdown-content").className = "dropdownLinks";
+                 
+          }
+      }
+    </script>
+
+</html> 

@@ -1,0 +1,4 @@
+let example = "Ed";
+
+example = 
+console.log(example);
