@@ -29,7 +29,7 @@
           <div id="dropdown-content" >
             <a href="pharpingToChampadevi.html" class="dropdownLinks" id="link1">Pharping to Champadevi</a>
             <a href="langtangValley.html" class="dropdownLinks" id="link2">Langtang Valley</a>
-            <a href="#" class="dropdownLinks" id="link3">Nagarkot</a>
+            <a href="nagarkot.html" class="dropdownLinks" id="link3">Nagarkot</a>
           </div>
         </div>
       
@@ -168,10 +168,12 @@
         function scrollHeader() {
           if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
               document.getElementById("headerBar").className = "scrolledHeader";
+              document.getElementById("dropdown-content").className = "scrolledDropdown";
               
             } else {
               document.getElementById("headerBar").className = "";
-              
+              document.getElementById("dropdown-content").className = "dropdownLinks";
+                 
           }
       }
     </script>
