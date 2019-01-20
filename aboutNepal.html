@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title> Walking Nepal </title>
+		<link rel="stylesheet" href="CSS/styles.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+	<body> 
+		<header id="headerBar">
+			<div class="headerImageContainer">
+
+				<a id="homeButton" class="headerButton" href="walkingNepal.html">Home</a>
+
+				<div class="dropdown">
+					<a id="walksDropdown" class="dropbtn" href="independentWalks.html">Walks</a>
+					<div id="dropdown-content" >
+						<a href="pharpingToChampadevi.html" class="dropdownLinks" id="link1">Pharping to Champadevi</a>
+						<a href="langtangValley.html" class="dropdownLinks" id="link2">Langtang Valley</a>
+						<a href="nagarkot.html" class="dropdownLinks" id="link3">Nagarkot</a>
+					</div>
+				</div>
+			
+				<a class="headerButton" href="kathmandu.html">Kathmandu</a>
+        <a class="headerButton" href="gallery.html">Gallery</a>
+        <a class="headerButton" href="aboutNepal.html">About Nepal</a>
+        <a class="headerButton" href="contact.html">Contact</a> 	
+			</div>
+		</header>
+
+		<!-- <div class="headerImageContainer2">  -->
+			
+		</div>
+
+
+
+		<section>
+			<h1>
+			Nepal's History 
+			</h1>
+
+			<p> 
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis urna dui, ut tempus tortor. Aliquam enim massa, porta a vehicula in, vehicula at lectus. Ut turpis diam, porttitor a iaculis quis, bibendum non lectus. Nullam vitae erat a felis pulvinar tempor ut id leo. Aenean accumsan feugiat ultrices. Duis rhoncus eros id odio faucibus imperdiet. Nulla nibh mauris, placerat sagittis placerat sed, commodo in mi.
+
+
+			</p>
+
+			<h2>
+		  		Culture
+			</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis urna dui, ut tempus tortor. Aliquam enim massa, porta a vehicula in, vehicula at lectus. Ut turpis diam, porttitor a iaculis quis, bibendum non lectus. Nullam vitae erat a felis pulvinar tempor ut id leo. Aenean accumsan feugiat ultrices. Duis rhoncus eros id odio faucibus imperdiet. Nulla nibh mauris, placerat sagittis placerat sed, commodo in mi.			
+
+			</p>
+		</section>
+
+
+		
+
+		<script>
+				window.onscroll = function() {scrollHeader()};
+				function scrollHeader() {
+					if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+			   		 	document.getElementById("headerBar").className = "scrolledHeader";
+			   		 	document.getElementById("dropdown-content").className = "scrolledDropdown";
+			   		 	
+				    } else {
+			        document.getElementById("headerBar").className = "";
+			        document.getElementById("dropdown-content").className = "dropdownLinks";
+			           
+			    }
+			}
+		</script>
+
+
+
+	</body> 
+</html> 
+
+
+<!-- <script>
+				window.onscroll = function() {scrollHeader2()};
+				function scrollHeader2() {
+					if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+			   		 	document.getElementById("dropdown-content").className = "scrolledDropdown";
+				    } else {
+			        document.getElementById("dropdown-content").className = "";
+			    }
+			}
+		</script>  -->
