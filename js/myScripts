@@ -1,0 +1,12 @@
+
+alert("hello world")
+
+$(document).ready(() => {
+  
+      $('.changeMap').on('click', () => {
+    $('.maps').toggle();
+  })
+   
+
+})
+

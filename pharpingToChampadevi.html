@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" href="CSS/styles.css"/>
 
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+
+    <script type="text/javascript" src="js/myScripts.js" defer></script>
+
+
     <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -75,17 +80,22 @@
   	    <p> 
   	  		There are buses from Kathmandu Ratna Park and other major bus stops but if you're starting in Patan, it's easier to pick it up on the way. 
 	  		From the ring road, turn down Dakshinkali road and walk around 100 metres. There will be lots of buses pulling in, calling out their destinations and encouraging you to join them! 
-	  		Make sure you ask for Pharping (sounds like Parping) or, if that gets blank looks, Dakshinkali. Lots of the buses are heading to other places but one for Pharping will show up eventually, just be persistent
+	  		Make sure you ask for Pharping (sounds like Parping) or, if that gets blank looks, Dakshinkali. Lots of the buses are heading to other places but one for Pharping will show up eventually, just be persistent. 
 	    </p>
 
-		<div class="maps" id="busStopMap">
+
+       <div style="margin-left: 40%"> <button class="changeMap" style="background-color: transparent; border: none;"> Click here for an alternative map.</button> </div>
+       
+		<div class="maps" id="busStopMap" style="display: none";>
 	    	<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2541.945347731358!2d85.2987388852856!3d27.683434648055268!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1538573056174" width="400" height="200" frameborder="0" style="border:0" allowfullscreen style="float:center"></iframe>
 	    </div>
-	    
+
+
       <div class="maps">
 	    	<iframe align = "center" width="425" height="350" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=85.2927017211914%2C27.679784753121144%2C85.3046751022339%2C27.685504206607018&amp;layer=mapnik&amp;marker=27.682644517304933%2C85.29868841171265" style="border: 0px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=27.68264&amp;mlon=85.29869#map=17/27.68264/85.29869">View Larger Map</a></small>
       </div>
 	    
+
 	    
 	</section>
 
@@ -129,33 +139,6 @@
         </div>
       </div>
 
-      <script>
-            // Get the modal
-            var modal = document.getElementById('theModal');
-
-            // Get the button that opens the modal
-            var btn = document.getElementById("busStopButton");
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks the button, open the modal 
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-          </script>
        
     </section>
 
@@ -171,20 +154,7 @@
   	
   	</footer>
 
-    <script>
-        window.onscroll = function() {scrollHeader()};
-        function scrollHeader() {
-          if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-              document.getElementById("headerBar").className = "scrolledHeader";
-              document.getElementById("dropdown-content").className = "scrolledDropdown";
-              
-            } else {
-              document.getElementById("headerBar").className = "";
-              document.getElementById("dropdown-content").className = "dropdownLinks";
-                 
-          }
-      }
-    </script>
+
 
   </body> 
 
