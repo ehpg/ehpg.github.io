@@ -1,0 +1,219 @@
+/* Fonts: Modern, clean, and minimalist */
+@font-face {
+    font-family: 'Raleway';
+    src: url('raleway-thin-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefin-sans-v12-latin-regular.woff2') format('woff2'),
+         url('../fonts/josefin-sans-v12-latin-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Base Styles */
+:root {
+    --bg-primary: #f8f4e9; /* Soft off-white */
+    --bg-header: #5d4037; /* Warm brown */
+    --text-primary: #5d4037; /* Warm brown */
+    --text-light: #f8f4e9; /* Off-white */
+    --text-accent: #ff7043; /* Soft orange */
+    --transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-primary);
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 220px;
+    min-height: 100vh;
+}
+
+/* Header: Minimalist and sticky */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+    background-color: var(--bg-header);
+    transition: var(--transition);
+    z-index: 99;
+    overflow: hidden;
+}
+
+.scrolledHeader {
+    height: 70px;
+}
+
+/* Navigation: Clean and subtle */
+nav {
+    position: fixed;
+    top: 280px;
+    left: 20px;
+    width: 150px;
+    z-index: 1;
+}
+
+.headerButton, .dropdown {
+    display: block;
+    margin: 10px 0;
+    padding: 8px 12px;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+.headerButton:hover, .dropdown:hover .dropbtn {
+    color: var(--text-accent);
+}
+
+.dropdown {
+    position: relative;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: var(--bg-header);
+    min-width: 180px;
+    padding: 8px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover #dropdown-content {
+    display: block;
+}
+
+#dropdown-content a {
+    color: var(--text-light);
+    padding: 8px 16px;
+    display: block;
+    transition: var(--transition);
+}
+
+#dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-accent);
+}
+
+/* Content: Spacious and readable */
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-accent);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    width: 80%;
+    margin: 0 auto 20px;
+    text-align: justify;
+    color: var(--text-primary);
+}
+
+/* Images: Minimalist and elegant */
+.guidePhoto, .flexImages {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    transition: var(--transition);
+    filter: grayscale(20%);
+}
+
+.guidePhoto:hover, .flexImages:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* Footer: Subtle and clean */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-header);
+    color: var(--text-light);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Modal: Minimalist overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 5% auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Gallery: Clean and modern */
+.galleryContent {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.column {
+    display: inline-block;
+    width: 22%;
+    margin: 0 2%;
+    vertical-align: top;
+}
+
+.galleryPhoto {
+    width: 100%;
+    height: auto;
+    filter: grayscale(30%);
+    transition: var(--transition);
+}
+
+.galleryPhoto:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+    .column {
+        width: 45%;
+    }
+}
