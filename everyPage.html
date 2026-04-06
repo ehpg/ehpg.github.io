@@ -1,31 +1,51 @@
 <!DOCTYPE html>
-<html>
-	<head>
-    	<meta charset="utf-8"/>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Your Website</title>
+    <link rel="stylesheet" href="CSS/styles_new.css"/>
 
-    
-    	<link rel="stylesheet" href="CSS/styles_new.css"/>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    	<!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-     	<!--[if lte IE 7]>
+    <!--[if lte IE 7]>
         <link rel="stylesheet" href="style_ie.css" />
-        <![endif]-->
-  	</head>
+    <![endif]-->
+</head>
 
-	<body>
-		<header>
-			<div class="headerImageContainer">
-				
-				<a id="homeButton" class="headerButton" href="walkingNepal.html">Home</a>
-				<a class="headerButton" href="independentWalks.html">Walks</a>
-				<a class="headerButton" href="#">Button 3</a>
-				<a class="headerButton" href="#">Button 4</a>
-				<a class="headerButton" href="#">Button 5</a>
-				<a class="headerButton" href="#">Button 6</a>	
-			</div>
-		</header>
-	</body>
+<body>
+    <header>
+        <div class="headerImageContainer">
+            <a id="homeButton" class="headerButton" href="walkingNepal.html">Home</a>
+            <a class="headerButton" href="independentWalks.html">Walks</a>
+            <div class="dropdown">
+                <button class="dropbtn">More</button>
+                <div id="dropdown-content">
+                    <a id="link1" href="#">Button 3</a>
+                    <a id="link2" href="#">Button 4</a>
+                    <a id="link3" href="#">Button 5</a>
+                    <a id="link4" href="#">Button 6</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <!-- Optional: Add a sticky navigation menu here if needed -->
+    </nav>
+
+    <main>
+        <!-- Your main content sections, articles, and images will go here -->
+        <section>
+            <h1>Welcome to Our Site</h1>
+            <p>This is a sample paragraph. Replace it with your content.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Your Website. All rights reserved.</p>
+    </footer>
+</body>
 </html>
